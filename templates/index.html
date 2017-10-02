@@ -10,14 +10,12 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <link
         href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.9.min.css"
         rel="stylesheet" type="text/css">
     <link
         href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.9.min.css"
         rel="stylesheet" type="text/css">
-
     <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.9.min.js"></script>
     <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.9.min.js"></script>
 
@@ -44,32 +42,26 @@
           {% else %}
           <input type="checkbox" name="features" value="close" />Closing price<br>
           {% endif %}
-
           {% if "adj_close" in checked_values %}
           <input type="checkbox" name="features" value="adj_close" checked="" />Adjusted closing price<br>
           {% else %}
           <input type="checkbox" name="features" value="adj_close" />Adjusted closing price<br>
           {% endif %}
-
           {% if "open" in checked_values %}
           <input type="checkbox" name="features" value="open" checked="" />Opening price<br>
           {% else %}
           <input type="checkbox" name="features" value="open" />Opening price<br>
           {% endif %}
-
           {% if "adj_open" in checked_values %}
           <input type="checkbox" name="features" value="adj_open" checked="" />Adjusted opening price<br>
           {% else %}
           <input type="checkbox" name="features" value="adj_open" />Adjusted opening price<br>
           {% endif %}
-
           </p>
           <p><input type="submit" value="Plot data"></p>
           </form>
-
           {{ script|safe }}
           {{ div|safe }}
-
         </div>
       </div>
     </div>
