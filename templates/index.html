@@ -34,7 +34,7 @@
           <h2> >> Plot stock prices </h2>
           <form id="input" method="post" action="/">
           <p>Ticker stock symbol: <input type="text" name="ticker" value={{ ticker }} /> (e.g. GOOG, YHOO, AMZN, etc)</p>
-          <p>Number of past months to plot: <input type="text" name="months" value={{ months }} /></p>
+          <p>Number of past months to plot: <input type="number" name="months" value={{ months }} min="1" /></p>
           <p>
           Prices to show (multiple choice)<br>
           {% if "close" in checked_values %}
