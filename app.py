@@ -21,7 +21,9 @@ def index():
         values = request.form.getlist("features")
         values_ori = copy(values)
 
-        months = min(months, 20000)
+        months = min(months, 1200)
+        if months < 1:
+            months = 1
 
         if len(values) == 0:
           return render_template("error.html", reason="No values to plot specified")
