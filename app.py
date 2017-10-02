@@ -21,6 +21,8 @@ def index():
         values = request.form.getlist("features")
         values_ori = copy(values)
 
+        months = min(months, 20000)
+
         if len(values) == 0:
           return render_template("error.html", reason="No values to plot specified")
 
@@ -43,7 +45,7 @@ def index():
         try:
             plot = PlotWithBokeh(data.Date, data_list, values, sname)
         except:
-            return render_template("error.html", reason="plotting failed!")
+            return render_template("error.html", reason="plotting failed! Data might be corrupted!")
 
         # directly embedding plot (no plot file is ever written)
         script, div = components(plot)
