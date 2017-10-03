@@ -51,7 +51,7 @@ def PlotWithBokeh(dates, data_list, names, stock_name):
 
     p1.grid.grid_line_alpha = 0.3
     p1.xaxis.axis_label = "Date"
-    p1.yaxis.axis_label = "Price"
+    p1.yaxis.axis_label = "Price in US dollars"
     p1.xaxis.axis_label_text_font_style = "bold"
     p1.yaxis.axis_label_text_font_style = "bold"
 
